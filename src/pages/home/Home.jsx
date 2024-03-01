@@ -1,10 +1,12 @@
-import {useState} from "react";
+// import {useState} from "react";
 import viteLogo from "/vite.svg";
 import reactLogo from "@/assets/react.svg";
+import { signal } from '@preact/signals-react'
 
-
+let count = signal(0);
 export default function Home(){
-    const [count, setCount] = useState(0)
+    // const [count, setCount] = useState(0)
+
     const envWord = import.meta.env.VITE_APP_NAME
     return (
         <>
@@ -19,8 +21,8 @@ export default function Home(){
             <h1>Vite + React</h1>
             <h3>{envWord}</h3>
             <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
+                <button onClick={() =>  count.value++}>
+                    count is {count.value}
                 </button>
                 <p className="bg-red-200">
                     Edit <code>src/App.jsx</code> and save to test HMR
