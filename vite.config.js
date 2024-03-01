@@ -22,6 +22,8 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             less: {
+                math: "always",
+                relativeUrls: true,
                 javascriptEnabled: true
             }
         },

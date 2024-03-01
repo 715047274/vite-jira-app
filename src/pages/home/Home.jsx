@@ -22,7 +22,7 @@ export default function Home(){
             <h3>{envWord}</h3>
             <div className="card">
                 <button onClick={() =>  count.value++}>
-                    count is {count.value}
+                    count is {count}
                 </button>
                 <p className="bg-red-200">
                     Edit <code>src/App.jsx</code> and save to test HMR
